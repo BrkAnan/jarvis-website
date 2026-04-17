@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S — MARK XXXV | AI Desktop Assistant</title>
+    <meta name="description" content="J.A.R.V.I.S MARK XXXV — A real-time AI desktop assistant powered by Gemini. Voice control, screen analysis, multilingual support, and 17+ integrated tools. Built in Python.">
+    <meta name="keywords" content="JARVIS, AI assistant, Gemini API, Python, voice control, desktop assistant, Iron Man">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon">◈</span>
+                <span class="nav-logo-text">J.A.R.V.I.S</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Systems</a>
+                <a href="#capabilities" class="nav-link">Capabilities</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#setup" class="nav-link">Deploy</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </div>
+            <a href="#setup" class="nav-cta">Initialize &nbsp;▸</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-grid-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                MARK XXXV &nbsp;·&nbsp; CLASSIFIED
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line hero-title-line--sub">Just A Rather Very</span>
+                <span class="hero-title-line hero-title-line--main">Intelligent System</span>
+            </h1>
+            <p class="hero-desc">
+                A real-time AI desktop assistant powered by <strong>Google Gemini</strong>. 
+                Voice-activated, multilingual, and equipped with <strong>17+ integrated tools</strong> — 
+                from controlling your computer to browsing the web, writing code, and managing your files.
+            </p>
+            <div class="hero-actions">
+                <a href="#setup" class="btn btn--primary">
+                    <span class="btn-icon">▸</span> Deploy J.A.R.V.I.S
+                </a>
+                <a href="#features" class="btn btn--ghost">
+                    Explore Systems
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value" data-count="17">0</span>
+                    <span class="hero-stat-label">Integrated Tools</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">∞</span>
+                    <span class="hero-stat-label">Languages</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">24/7</span>
+                    <span class="hero-stat-label">Always Online</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="arc-reactor" id="arcReactor">
+                <div class="arc-ring arc-ring--1"></div>
+                <div class="arc-ring arc-ring--2"></div>
+                <div class="arc-ring arc-ring--3"></div>
+                <div class="arc-core"></div>
+                <div class="arc-glow"></div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-header">
+            <span class="section-tag">◈ CORE SYSTEMS</span>
+            <h2 class="section-title">Integrated Subsystems</h2>
+            <p class="section-desc">Every module is a precision-engineered subsystem, working in concert to deliver unparalleled desktop intelligence.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card feature-card--large" data-aos="fade-up">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">🎙️</div>
+                <h3>Real-Time Voice</h3>
+                <p>Live audio streaming with native speech recognition and synthesis. JARVIS hears you, understands context, and responds naturally — in any language.</p>
+                <div class="feature-tag">Gemini 2.5 Flash Native Audio</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="100">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">👁️</div>
+                <h3>Screen & Camera Vision</h3>
+                <p>Captures and analyzes your screen or webcam in real-time. Ask "what's on my screen?" and get intelligent responses.</p>
+                <div class="feature-tag">Vision Module</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="200">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">🌐</div>
+                <h3>Web Search & Browse</h3>
+                <p>Searches the internet, controls browsers, fills forms, clicks elements — your AI web navigator.</p>
+                <div class="feature-tag">Browser Control</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="300">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">💻</div>
+                <h3>Computer Control</h3>
+                <p>Volume, brightness, window management, keyboard shortcuts, app launching — full system control via voice.</p>
+                <div class="feature-tag">System Integration</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="100">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">📁</div>
+                <h3>File Management</h3>
+                <p>Create, move, copy, rename, delete, and organize files. Find your largest files. Clean up your desktop.</p>
+                <div class="feature-tag">File Controller</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="200">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">🧠</div>
+                <h3>Persistent Memory</h3>
+                <p>Remembers your name, preferences, projects, and personal details across sessions. JARVIS learns and adapts.</p>
+                <div class="feature-tag">Memory Manager</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="300">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">✈️</div>
+                <h3>Flight Finder</h3>
+                <p>Searches Google Flights for the best deals and speaks the results. Plan your trips hands-free.</p>
+                <div class="feature-tag">Flight Search</div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-delay="400">
+                <div class="feature-card-glow"></div>
+                <div class="feature-icon">🎮</div>
+                <h3>Game Updater</h3>
+                <p>Install, update, and manage Steam & Epic Games titles. Schedule overnight downloads and auto-shutdown.</p>
+                <div class="feature-tag">Steam & Epic</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Showcase -->
+    <section id="capabilities">
+        <div class="section-header">
+            <span class="section-tag">◈ CAPABILITIES</span>
+            <h2 class="section-title">What Can JARVIS Do?</h2>
+            <p class="section-desc">From code generation to messaging, JARVIS handles it all through natural voice commands.</p>
+        </div>
+        <div class="capabilities-container">
+            <div class="capability-row">
+                <div class="capability-visual">
+                    <img src="assets/voice.png" alt="Voice Interface" loading="lazy">
+                    <div class="capability-visual-overlay"></div>
+                </div>
+                <div class="capability-info">
+                    <span class="capability-number">01</span>
+                    <h3>Speak Any Language</h3>
+                    <p>JARVIS understands and responds in every language on Earth. Speak Turkish, English, Japanese, Arabic — it adapts seamlessly. Powered by Gemini's native multilingual audio model.</p>
+                    <div class="capability-tags">
+                        <span>Turkish</span><span>English</span><span>Japanese</span><span>Arabic</span><span>+195 more</span>
+                    </div>
+                </div>
+            </div>
+            <div class="capability-row capability-row--reverse">
+                <div class="capability-visual">
+                    <img src="assets/screen.png" alt="Screen Analysis" loading="lazy">
+                    <div class="capability-visual-overlay"></div>
+                </div>
+                <div class="capability-info">
+                    <span class="capability-number">02</span>
+                    <h3>Code & Dev Agent</h3>
+                    <p>Ask JARVIS to write Python scripts, build entire projects, debug code, or explain complex algorithms. The Dev Agent creates multi-file projects from scratch — installs dependencies, opens VS Code, and runs them.</p>
+                    <div class="capability-tags">
+                        <span>Code Helper</span><span>Dev Agent</span><span>Auto Debug</span><span>Multi-language</span>
+                    </div>
+                </div>
+            </div>
+            <div class="capability-row">
+                <div class="capability-visual">
+                    <img src="assets/hero.png" alt="System Control" loading="lazy">
+                    <div class="capability-visual-overlay"></div>
+                </div>
+                <div class="capability-info">
+                    <span class="capability-number">03</span>
+                    <h3>Full System Mastery</h3>
+                    <p>Control every aspect of your Windows machine — adjust volume, manage windows, send WhatsApp messages, set reminders via Task Scheduler, run terminal commands, and even manage your desktop wallpaper.</p>
+                    <div class="capability-tags">
+                        <span>WhatsApp</span><span>Reminders</span><span>Terminal</span><span>Desktop</span><span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture">
+        <div class="section-header">
+            <span class="section-tag">◈ ARCHITECTURE</span>
+            <h2 class="section-title">System Blueprint</h2>
+            <p class="section-desc">A modular Python architecture with async audio streams, real-time tool execution, and persistent memory.</p>
+        </div>
+        <div class="arch-grid">
+            <div class="arch-card">
+                <div class="arch-card-header">
+                    <span class="arch-card-icon">⚡</span>
+                    <h4>Real-Time Audio Pipeline</h4>
+                </div>
+                <div class="arch-code">
+                    <code>
+<span class="code-comment"># Live audio streaming @ 16kHz</span>
+<span class="code-keyword">LIVE_MODEL</span> = <span class="code-string">"gemini-2.5-flash-native-audio"</span>
+<span class="code-keyword">SEND_SAMPLE_RATE</span> = <span class="code-number">16000</span>
+<span class="code-keyword">RECEIVE_SAMPLE_RATE</span> = <span class="code-number">24000</span>
+
+<span class="code-comment"># Async mic → Gemini → speakers</span>
+<span class="code-keyword">async def</span> <span class="code-func">_listen_audio</span>(self):
+    <span class="code-keyword">with</span> sd.InputStream(...):
+        <span class="code-keyword">while</span> <span class="code-number">True</span>:
+            <span class="code-keyword">await</span> asyncio.sleep(<span class="code-number">0.1</span>)
+                    </code>
+                </div>
+            </div>
+            <div class="arch-card">
+                <div class="arch-card-header">
+                    <span class="arch-card-icon">🔧</span>
+                    <h4>Tool Execution Engine</h4>
+                </div>
+                <div class="arch-code">
+                    <code>
+<span class="code-comment"># 17 function declarations</span>
+<span class="code-keyword">TOOL_DECLARATIONS</span> = [
+    { <span class="code-string">"name"</span>: <span class="code-string">"open_app"</span> },
+    { <span class="code-string">"name"</span>: <span class="code-string">"web_search"</span> },
+    { <span class="code-string">"name"</span>: <span class="code-string">"browser_control"</span> },
+    { <span class="code-string">"name"</span>: <span class="code-string">"screen_process"</span> },
+    { <span class="code-string">"name"</span>: <span class="code-string">"computer_control"</span> },
+    <span class="code-comment"># ... 12 more tools</span>
+]
+                    </code>
+                </div>
+            </div>
+            <div class="arch-card">
+                <div class="arch-card-header">
+                    <span class="arch-card-icon">🧠</span>
+                    <h4>Memory System</h4>
+                </div>
+                <div class="arch-code">
+                    <code>
+<span class="code-comment"># Persistent user memory</span>
+<span class="code-keyword">from</span> memory.memory_manager <span class="code-keyword">import</span> (
+    load_memory, update_memory,
+    format_memory_for_prompt,
+    should_extract_memory,
+    extract_memory
+)
+
+<span class="code-comment"># Auto-saves: name, preferences,</span>
+<span class="code-comment"># projects, relationships, wishes</span>
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="arch-diagram">
+            <div class="arch-node arch-node--input">
+                <span>🎙️ Microphone</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node arch-node--core">
+                <span>⚡ Gemini Live API</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node arch-node--tools">
+                <span>🔧 17 Tool Modules</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-node arch-node--output">
+                <span>🔊 Audio Response</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section id="tools">
+        <div class="section-header">
+            <span class="section-tag">◈ TOOL REGISTRY</span>
+            <h2 class="section-title">All 17 Tools</h2>
+        </div>
+        <div class="tools-grid">
+            <div class="tool-item"><span class="tool-icon">📂</span><span class="tool-name">open_app</span><span class="tool-desc">Launch any application</span></div>
+            <div class="tool-item"><span class="tool-icon">🔍</span><span class="tool-name">web_search</span><span class="tool-desc">Search the internet</span></div>
+            <div class="tool-item"><span class="tool-icon">🌤️</span><span class="tool-name">weather_report</span><span class="tool-desc">Real-time weather</span></div>
+            <div class="tool-item"><span class="tool-icon">💬</span><span class="tool-name">send_message</span><span class="tool-desc">WhatsApp & Telegram</span></div>
+            <div class="tool-item"><span class="tool-icon">⏰</span><span class="tool-name">reminder</span><span class="tool-desc">Task Scheduler</span></div>
+            <div class="tool-item"><span class="tool-icon">🎬</span><span class="tool-name">youtube_video</span><span class="tool-desc">Play & summarize</span></div>
+            <div class="tool-item"><span class="tool-icon">👁️</span><span class="tool-name">screen_process</span><span class="tool-desc">Screen & webcam vision</span></div>
+            <div class="tool-item"><span class="tool-icon">⚙️</span><span class="tool-name">computer_settings</span><span class="tool-desc">Volume, brightness, etc</span></div>
+            <div class="tool-item"><span class="tool-icon">🌐</span><span class="tool-name">browser_control</span><span class="tool-desc">Full browser automation</span></div>
+            <div class="tool-item"><span class="tool-icon">📁</span><span class="tool-name">file_controller</span><span class="tool-desc">File management</span></div>
+            <div class="tool-item"><span class="tool-icon">💻</span><span class="tool-name">cmd_control</span><span class="tool-desc">Terminal commands</span></div>
+            <div class="tool-item"><span class="tool-icon">🖥️</span><span class="tool-name">desktop_control</span><span class="tool-desc">Wallpaper & organize</span></div>
+            <div class="tool-item"><span class="tool-icon">🧑‍💻</span><span class="tool-name">code_helper</span><span class="tool-desc">Write & run code</span></div>
+            <div class="tool-item"><span class="tool-icon">🏗️</span><span class="tool-name">dev_agent</span><span class="tool-desc">Build full projects</span></div>
+            <div class="tool-item"><span class="tool-icon">🖱️</span><span class="tool-name">computer_control</span><span class="tool-desc">Mouse & keyboard</span></div>
+            <div class="tool-item"><span class="tool-icon">🎮</span><span class="tool-name">game_updater</span><span class="tool-desc">Steam & Epic Games</span></div>
+            <div class="tool-item"><span class="tool-icon">✈️</span><span class="tool-name">flight_finder</span><span class="tool-desc">Google Flights search</span></div>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section id="setup">
+        <div class="section-header">
+            <span class="section-tag">◈ DEPLOYMENT</span>
+            <h2 class="section-title">Initialize J.A.R.V.I.S</h2>
+            <p class="section-desc">Get your personal AI assistant running in under 3 minutes.</p>
+        </div>
+        <div class="setup-steps">
+            <div class="setup-step">
+                <div class="setup-step-number">01</div>
+                <div class="setup-step-content">
+                    <h4>Install Python 3.11 (64-bit)</h4>
+                    <p>Download and install <a href="https://www.python.org/downloads/release/python-3110/" target="_blank">Python 3.11</a> 64-bit for Windows. Make sure to check "Add to PATH" during installation.</p>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="setup-step-number">02</div>
+                <div class="setup-step-content">
+                    <h4>Get Your Gemini API Key</h4>
+                    <p>Visit <a href="https://aistudio.google.com/app/api-keys" target="_blank">Google AI Studio</a> and generate a free API key. This powers JARVIS's intelligence.</p>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="setup-step-number">03</div>
+                <div class="setup-step-content">
+                    <h4>Install Dependencies</h4>
+                    <div class="setup-code">
+                        <code>cd C:\Path\To\JARVIS</code>
+                        <code>pip install -r requirements.txt</code>
+                    </div>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="setup-step-number">04</div>
+                <div class="setup-step-content">
+                    <h4>Configure API Key</h4>
+                    <p>Navigate to <code>C:\Users\user\Downloads\JARVIS\config</code> and open the <code>api_keys.json</code> file to enter your Gemini API key manually.</p>
+                </div>
+            </div>
+            <div class="setup-step">
+                <div class="setup-step-number">05</div>
+                <div class="setup-step-content">
+                    <h4>Launch JARVIS</h4>
+                    <div class="setup-code">
+                        <code>py -3.11 main.py</code>
+                    </div>
+                    <p>JARVIS is now online and ready to assist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="section-header">
+            <span class="section-tag">◈ ACQUISITION</span>
+            <h2 class="section-title">Choose Your Clearance Level</h2>
+            <p class="section-desc">Select the deployment tier that fits your needs. Both plans include full access to all 17 integrated tools.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-card-glow"></div>
+                <div class="pricing-tier">STANDARD</div>
+                <div class="pricing-badge">One-Time Access</div>
+                <div class="pricing-amount">
+                    <span class="pricing-currency">$</span>
+                    <span class="pricing-value">20</span>
+                </div>
+                <p class="pricing-cycle">one-time payment</p>
+                <ul class="pricing-features">
+                    <li><span class="pricing-check">✓</span> Full J.A.R.V.I.S system</li>
+                    <li><span class="pricing-check">✓</span> All 17 integrated tools</li>
+                    <li><span class="pricing-check">✓</span> Voice control in all languages</li>
+                    <li><span class="pricing-check">✓</span> Screen &amp; camera vision</li>
+                    <li><span class="pricing-check">✓</span> Persistent memory system</li>
+                    <li><span class="pricing-check">✓</span> Most recent version at purchase</li>
+                    <li class="pricing-feature--disabled"><span class="pricing-x">✕</span> Future updates</li>
+                    <li class="pricing-feature--disabled"><span class="pricing-x">✕</span> Priority support</li>
+                </ul>
+                <button class="btn btn--ghost pricing-btn" onclick="openPaymentModal('standard')">Deploy Standard</button>
+            </div>
+            <div class="pricing-card pricing-card--featured">
+                <div class="pricing-card-glow"></div>
+                <div class="pricing-featured-badge">RECOMMENDED</div>
+                <div class="pricing-tier">UNLIMITED</div>
+                <div class="pricing-badge">Lifetime Access</div>
+                <div class="pricing-amount">
+                    <span class="pricing-currency">$</span>
+                    <span class="pricing-value">59</span>
+                    <span class="pricing-decimal">.99</span>
+                </div>
+                <p class="pricing-cycle">one-time payment · forever</p>
+                <ul class="pricing-features">
+                    <li><span class="pricing-check">✓</span> Full J.A.R.V.I.S system</li>
+                    <li><span class="pricing-check">✓</span> All 17 integrated tools</li>
+                    <li><span class="pricing-check">✓</span> Voice control in all languages</li>
+                    <li><span class="pricing-check">✓</span> Screen &amp; camera vision</li>
+                    <li><span class="pricing-check">✓</span> Persistent memory system</li>
+                    <li><span class="pricing-check">✓</span> Most recent version at purchase</li>
+                    <li><span class="pricing-check pricing-check--highlight">✓</span> <strong>Unlimited future updates</strong></li>
+                    <li><span class="pricing-check pricing-check--highlight">✓</span> <strong>Priority support</strong></li>
+                </ul>
+                <button class="btn btn--primary pricing-btn" onclick="openPaymentModal('unlimited')">Deploy Unlimited &nbsp;▸</button>
+            </div>
+        </div>
+        <p class="pricing-note">Both plans require a free Google Gemini API key · No subscriptions · No hidden fees</p>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closePaymentModal()">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon">◈</span>
+                <h3 class="modal-title" id="modalTitle">Deploy J.A.R.V.I.S</h3>
+                <p class="modal-subtitle" id="modalSubtitle">STANDARD — $20</p>
+            </div>
+            <p class="modal-desc">Send the exact amount to one of the wallets below</p>
+            <div class="payment-methods">
+                <div class="crypto-wallets crypto-wallets--visible">
+                    <div class="crypto-wallet">
+                        <div class="crypto-wallet-header">
+                            <span class="crypto-coin crypto-coin--btc">₿</span>
+                            <span class="crypto-name">Bitcoin (BTC)</span>
+                        </div>
+                        <div class="crypto-address-row">
+                            <code class="crypto-address" id="btcAddress">1BJzRhxQmytfqLQnBgM8iuMbULv6fYsU1y</code>
+                            <button class="crypto-copy" onclick="copyAddress('btcAddress')" title="Copy address">
+                                <span class="copy-icon">⧉</span>
+                                <span class="copy-label">COPY</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="crypto-wallet">
+                        <div class="crypto-wallet-header">
+                            <span class="crypto-coin crypto-coin--eth">Ξ</span>
+                            <span class="crypto-name">Ethereum (ETH)</span>
+                        </div>
+                        <div class="crypto-address-row">
+                            <code class="crypto-address" id="ethAddress">0x7d5daab94a782b548ca27cfa6737ce2d9f4d144e</code>
+                            <button class="crypto-copy" onclick="copyAddress('ethAddress')" title="Copy address">
+                                <span class="copy-icon">⧉</span>
+                                <span class="copy-label">COPY</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tx-verification">
+                        <h4>Verify Payment</h4>
+                        <p class="crypto-note">After sending, paste your Transaction ID (TXHash) below. The system checks for blockchain confirmations automatically.</p>
+                        <div class="tx-input-group">
+                            <select id="txCurrency" class="tx-select">
+                                <option value="btc">BTC</option>
+                                <option value="eth">ETH</option>
+                            </select>
+                            <input type="text" id="txIdInput" class="tx-input" placeholder="Paste Transaction ID (TXID)..." autocomplete="off">
+                        </div>
+                        <button class="btn btn--primary tx-verify-btn" onclick="startTxVerification()" id="txVerifyBtn">Verify Transaction</button>
+                        <div id="txStatus" class="tx-status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">◈ J.A.R.V.I.S</span>
+                <p class="footer-tagline">Just A Rather Very Intelligent System</p>
+            </div>
+            <div class="footer-meta">
+                <span>Kovak Industries</span>
+                <span>·</span>
+                <span>CLASSIFIED</span>
+                <span>·</span>
+                <span>MARK XXXV</span>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with Python · Powered by Google Gemini · © 2026 Kovak Industries</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
